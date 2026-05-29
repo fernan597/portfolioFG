@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --font-sans: "Poppins", sans-serif;
+    --font-mono: "Sorts Mill Goudy", monospace;
+}
+
+@layer base {
+
+    html {
+        @apply transition-colors duration-300;
+    }
+
+    body {
+        @apply bg-white text-black antialiased text-sm transition-colors duration-300;
+    }
+
+    .dark body {
+        @apply bg-zinc-950 text-white;
+    }
+
+    button {
+        @apply cursor-pointer;
+    }
+}
