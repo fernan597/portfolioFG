@@ -6,7 +6,7 @@ export default function ProjectsSection() {
             title: "Artesanos",
             description: "Red social desarrollada como proyecto universitario. Diseñé y optimicé la arquitectura de la base de datos y desarrolle parte de la lógica del backend. Tecnologías: PHP, MySQL.",
             image: "/assets/project-1.png",
-            link: "",
+            link: "https://github.com/Bautimp/PI-Artesanoss",
         },
         {
             title: "Gestión de Noticias",
@@ -18,19 +18,19 @@ export default function ProjectsSection() {
             title: "Sistema de Turnos Hospitalario",
             description: "Aplicación de escritorio para la asignación, control y optimización de turnos médicos y gestión de pacientes. Enfocado en la eficiencia de algoritmos y estructuras de datos. Tecnologías: C.",
             image: "/assets/project-2.png",
-            link: "",
+            link: "https://github.com/fernan597/sistema-turnos-hospital",
         },
         {
             title: "Gestión Jardín de Infantes",
             description: "Software integral para la administración institucional, control de asistencia, legajos de alumnos y gestión de personal docente. Desarrollado bajo el paradigma de POO. Tecnologías: Java.",
             image: "/assets/project-2.png",
-            link: "",
+            link: "https://github.com/fernan597/gestionJardinMaternal-Java-",
         },
         {
             title: "Sistema de Biblioteca",
             description: "Plataforma para el control de inventario de libros, optimizando los tiempos de búsqueda y registro. Tecnologías: Java.",
             image: "/assets/project-2.png",
-            link: "",
+            link: "https://github.com/fernan597/gestionBiblioteca",
         },
     ];
 
@@ -58,6 +58,16 @@ export default function ProjectsSection() {
                             <p className="text-gray-500 dark:text-gray-400 mt-1">
                                 {project.description}
                             </p>
+                            {project.link && (
+                                <a
+                                    href={project.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-block mt-4 text-blue-600 hover:underline"
+                                >
+                                    Ver proyecto →
+                                </a>
+                            )}
                         </div>
                     </div>
                 ))}
